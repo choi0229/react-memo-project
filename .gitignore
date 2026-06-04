@@ -1,23 +1,59 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
-
-# testing
-/coverage
-
-# production
-/build
-
-# misc
+# macOS
 .DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.DS_STORE
 
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# 의존성 패키지
+node_modules/
+
+# 빌드 및 결과물 (Vite와 CRA 둘 다 대응)
+build/
+dist/
+coverage/
+.module-cache/
+
+# 로그 파일
+*.log*
+
+# 에디터 및 IDE 설정
+.vscode/
+.idea/
+*.iml
+*.sublime-project
+*.sublime-workspace
+.zed/
+*.swp
+*.swo
+
+# 임시 파일 및 캐시
+*~
+/tmp
+/.worktrees
+.claude/*.local.*
+
+# 기타 프레임워크 및 툴 관련 설정 (Flow, Grunt 등)
+scripts/flow/*/.flowconfig
+.flowconfig
+*.pyc
+.grunt
+_SpecRunner.html
+__benchmarks__
+remote-repo/
+fixtures/dom/public/react-dom.js
+fixtures/dom/public/react.js
+test/the-files-to-test.generated.js
+chrome-user-data
+
+# React DevTools 패키지 관련 빌드 제외 목록
+packages/react-devtools-core/dist
+packages/react-devtools-extensions/chrome/build
+packages/react-devtools-extensions/chrome/*.crx
+packages/react-devtools-extensions/chrome/*.pem
+packages/react-devtools-extensions/firefox/build
+packages/react-devtools-extensions/firefox/*.xpi
+packages/react-devtools-extensions/firefox/*.pem
+packages/react-devtools-extensions/shared/build
+packages/react-devtools-extensions/.tempUserDataDir
+packages/react-devtools-fusebox/dist
+packages/react-devtools-inline/dist
+packages/react-devtools-shell/dist
+packages/react-devtools-timeline/dist
